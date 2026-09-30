@@ -1,4 +1,3 @@
 db.url=jdbc:mysql://localhost:3306/bibliotheque
 db.username=NOM_UTILISATEUR
 db.password=MOT_DE_PASSE
-
