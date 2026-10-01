@@ -18,6 +18,16 @@ public class Principal {
     public static void main(String[] args) throws SQLException {
         AccesBdD db = new AccesBdD();
         
+        /*//Test de la récupération des catégories des enregistrements
+        if(db.getConnection() != null){
+            System.out.println("Catégories des livres:");
+            ResultSet result = db.getLesCategories();
+            while(result.next()){
+                String libelle = result.getString(2);
+                System.out.println(libelle);
+            }
+        }*/
+        
         /*//Test de la modification des informations d'un livre
         if(db.getConnection() != null){
             System.out.println("Connexion réussie");
@@ -77,7 +87,7 @@ public class Principal {
             }
         }*/
         
-        //Test de la connexion à la base de données et de la récupération des enregistrements
+        /*//Test de la connexion à la base de données et de la récupération des enregistrements
         if(db.getConnection() != null){
             System.out.println("Connexion réussie");
             System.out.println("Liste des livres");
@@ -90,7 +100,7 @@ public class Principal {
                 
                 System.out.println(titre + " - " + auteur + " - " + editeur + " - " + annee );
             }
-        }
+        }*/
         
     }
     

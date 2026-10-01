@@ -59,6 +59,21 @@ public class AccesBdD {
         return result;
     }
     
+    public ResultSet getLesCategories(){
+        ResultSet result = null;
+        try {
+            
+            String sql = "SELECT id, libelle FROM categorie";
+            Statement statement;
+            statement = connexion.createStatement();
+            result = statement.executeQuery(sql);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(AccesBdD.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+    
     public ResultSet getLesLivresUnEditeur(String editeur){
         ResultSet result = null;
         try {
